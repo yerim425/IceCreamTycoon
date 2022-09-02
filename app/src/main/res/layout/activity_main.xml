@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/cafe_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_ice_display">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_customer1"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layout_customer2"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_customer1"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/smile0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_pay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/coin"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/money_small"
+                    android:drawablePadding="3dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/order1"
+                    app:layout_constraintBottom_toTopOf="@+id/iv_customer1"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/order1"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/order"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginStart="-10dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_customer1"
+                    app:layout_constraintTop_toTopOf="@+id/iv_customer1">
+
+                    <ImageView
+                        android:id="@+id/iv_order1_cone"
+                        android:layout_width="20dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/cone"
+                        android:layout_marginBottom="35dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                    <ImageView
+                        android:id="@+id/iv_order1_ice1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/iv_order1_cone"/>
+                    <ImageView
+                        android:id="@+id/iv_order1_ice2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/iv_order1_ice1"/>
+
+                    <ImageView
+                        android:id="@+id/iv_result1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:tint="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_customer2"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                app:layout_constraintStart_toEndOf="@id/layout_customer1"
+                app:layout_constraintEnd_toStartOf="@id/layout_customer3"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_customer2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/smile1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_pay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/coin"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/money_small"
+                    android:drawablePadding="3dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/order2"
+                    app:layout_constraintBottom_toTopOf="@+id/iv_customer2"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/order2"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/order"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginStart="-10dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_customer2"
+                    app:layout_constraintTop_toTopOf="@+id/iv_customer2">
+
+                    <ImageView
+                        android:id="@+id/iv_order2_cone"
+                        android:layout_width="20dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/cone"
+                        android:layout_marginBottom="35dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                    <ImageView
+                        android:id="@+id/iv_order2_ice1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/iv_order2_cone"/>
+                    <ImageView
+                        android:id="@+id/iv_order2_ice2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/iv_order2_ice1"/>
+
+                    <ImageView
+                        android:id="@+id/iv_result2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:tint="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_customer3"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                app:layout_constraintStart_toEndOf="@id/layout_customer2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_customer3"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/smile2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_pay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/coin"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/money_small"
+                    android:drawablePadding="3dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/order3"
+                    app:layout_constraintBottom_toTopOf="@+id/iv_customer3"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/order3"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/order"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginStart="-10dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_customer3"
+                    app:layout_constraintTop_toTopOf="@+id/iv_customer3">
+
+                    <ImageView
+                        android:id="@+id/iv_order3_cone"
+                        android:layout_width="20dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/cone"
+                        android:layout_marginBottom="35dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                    <ImageView
+                        android:id="@+id/iv_order3_ice1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/iv_order3_cone"/>
+                    <ImageView
+                        android:id="@+id/iv_order3_ice2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/iv_order3_ice1"/>
+
+                    <ImageView
+                        android:id="@+id/iv_result3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:tint="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_window"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ice_display_window" />
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_time"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/time"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/time_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_time"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <ImageView
+        android:id="@+id/iv_money"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/money"
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintStart_toEndOf="@+id/time_limit"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_money"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sel_ic_start"
+        android:layout_marginStart="50dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/tv_money"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_ice_display"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ice_display_table">
+
+
+        <ImageView
+            android:id="@+id/iv_vanilla"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ice_vanilla_display"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_choco"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_choco"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ice_choco_display"
+            app:layout_constraintStart_toEndOf="@id/iv_vanilla"
+            app:layout_constraintEnd_toStartOf="@id/iv_strowberry"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_strowberry"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ice_strawberry_display"
+            app:layout_constraintStart_toEndOf="@id/iv_choco"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_mint_choco"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ice_mint_choco_display"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_blueberry"/>
+
+        <ImageView
+            android:id="@+id/iv_blueberry"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ice_blueberry_display"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_mint_choco"
+            app:layout_constraintEnd_toStartOf="@id/iv_cones"/>
+
+        <ImageView
+            android:id="@+id/iv_cones"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ice_cone_display"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_blueberry"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_making_table"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ice_making_table"
+        app:layout_constraintStart_toEndOf="@id/layout_ice_display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout_ice_display"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_trash"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/trash"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_ice_making"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/layout_ice_display"
+        app:layout_constraintEnd_toStartOf="@+id/iv_trash"
+        app:layout_constraintTop_toTopOf="@id/layout_ice_display"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_making_cone"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageView
+            android:id="@+id/iv_making_ice1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ice_vanilla"
+            android:layout_marginBottom="-25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/iv_making_cone"/>
+        <ImageView
+            android:id="@+id/iv_making_ice2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ice_vanilla"
+            android:layout_marginBottom="-25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/iv_making_ice1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <FrameLayout
+        android:id="@+id/showFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/count_start"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

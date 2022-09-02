@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_bg"
+    tools:context=".ResultActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/shape_result_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_calc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="정산표"
+            android:textColor="@color/resultView_text"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/result_ice1"
+            android:drawableEnd="@drawable/result_ice2"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_salesVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이스크림 판매수"
+            android:textSize="16dp"
+            android:textColor="@color/resultView_text"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/result_ice3"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_calc"/>
+        <TextView
+            android:id="@+id/input_salesVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/resultView_text"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_calc"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_salesMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이스크림 판매액"
+            android:textSize="16dp"
+            android:textColor="@color/resultView_text"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/result_ice_money"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_salesVolume"/>
+        <TextView
+            android:id="@+id/input_salesMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/resultView_text"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_salesVolume"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_ingredientMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="재료비"
+            android:textSize="16dp"
+            android:textColor="@color/resultView_text"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/result_ingredient"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_salesMoney"/>
+        <TextView
+            android:id="@+id/input_ingredientMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_salesMoney"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_mistakeMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="실수 보상"
+            android:textSize="16dp"
+            android:textColor="@color/resultView_text"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/result_mistake"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ingredientMoney"/>
+        <TextView
+            android:id="@+id/input_mistakeMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_ingredientMoney"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_todayMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="3dp"
+            android:paddingVertical="5dp"
+            android:background="@color/resultView_bg_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_mistakeMoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnOk">
+
+            <TextView
+                android:id="@+id/tv_todayMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 수익"
+                android:textSize="20dp"
+                android:textColor="@color/resultView_text"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/money_small"
+                android:drawablePadding="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/input_todayMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textSize="20dp"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:background="@drawable/sel_calc_btn_color"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_todayMoney"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

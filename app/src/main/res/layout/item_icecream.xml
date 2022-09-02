@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_cone"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+        android:id="@+id/iv_ice1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ice_vanilla"
+        android:layout_marginBottom="-25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_cone"
+        android:visibility="visible"/>
+    <ImageView
+        android:id="@+id/iv_ice2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ice_vanilla"
+        android:layout_marginBottom="-25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_ice1"
+        android:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

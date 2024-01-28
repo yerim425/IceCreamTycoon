@@ -10,6 +10,7 @@ https://drive.google.com/file/d/1QTxxZQ--IL7MuEnpreyc5rgOFNn7UJGA/view?usp=shari
 #### 1. 시작화면
 ###### - 시작 버튼(OPEN)을 누르면 게임 화면으로 넘어감
 ###### - 타이쿤 게임을 한 횟수만큼 날짜가 증가하여 캘린더에 표시됨
+![image](https://github.com/yerim425/RisingCamp4/assets/111108212/bbc2133d-b8e5-454a-abf9-33ac90076e7d)
 #### 2. 게임 화면
 ##### 2.1 게임 시간 : 2분(끝나면 자동으로 결과 화면으로 넘어감)
 ##### 2.2 아이스크림 제작 
@@ -29,8 +30,11 @@ https://drive.google.com/file/d/1QTxxZQ--IL7MuEnpreyc5rgOFNn7UJGA/view?usp=shari
 ###### - 아이스크림 한 덩이 재료비 : 3 coin
 ###### - 아이스크림 콘 재료비 : 1 coin
 ###### - 아이스크림 제작 실수 보상 비용 : 3 coin
+![image](https://github.com/yerim425/RisingCamp4/assets/111108212/903111d2-a9cb-40b1-a70f-5fdecfec5c68)
 #### 3. 결과 화면
 ###### - 오늘의 수익이 계산되어 표시됨
 ###### - SharedPreference를 통해 현재까지의 총 수익에 오늘의 수익이 더해지고 저장됨
 ###### - 확인 버튼을 누르면 시작 화면으로 넘어감
+![image](https://github.com/yerim425/RisingCamp4/assets/111108212/b275973a-a610-40ac-aee1-02a649ba1bcd)
+
 
